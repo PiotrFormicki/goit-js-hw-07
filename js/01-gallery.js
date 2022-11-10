@@ -37,12 +37,6 @@ gallery.addEventListener("click", (lightboxEvent) => {
   instance.show();
 
   document.addEventListener("keydown", (lightboxEvent) => {
-    // if (lightboxEvent.code !== "Escape" && instance.visible()) {
-    //   alert`Press ESC to leave full-screen mode`;
-    // } else if (lightboxEvent.code == "Escape" && instance.visible())      //Można łatwiej - świetna jest ta metoda :D
-    //   instance.close();
-    lightboxEvent.code == "Escape" && instance.visible()
-      ? instance.close()
-      : alert`Press ESC to leave full-screen mode`;
+    if (lightboxEvent.code == "Escape" && instance.visible()) instance.close();
   });
 });
